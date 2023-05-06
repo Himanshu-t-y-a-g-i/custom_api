@@ -26,7 +26,7 @@ bookRoutes.get("/:id", async (req, res) => {
     const { id } = req.params;
     console.log(id);
     try {
-        const data = await bookModel.findOne({ id });
+        const data = await bookModel.findOne({ _id:id });
         res.status(200).send({ msg: [data || {}], response: "success" });
     } catch (e) {
         res.send({ msg: [], response: e.message });
