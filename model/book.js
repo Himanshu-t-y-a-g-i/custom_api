@@ -11,3 +11,11 @@ const schema = mongoose.Schema({
 const bookModel = mongoose.model("book", schema);
 
 module.exports = { bookModel };
+
+obj = {
+    "title": "A horror story",
+    "author": "Dave",
+    "category": "Horror",
+    "price": 432,
+    "quantity": 2
+}
