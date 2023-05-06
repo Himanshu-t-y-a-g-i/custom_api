@@ -17,7 +17,7 @@ app.get("/", async (req, res) => {
 
 app.post("/register", async (req, res) => {
     const { name, email, password, isAdmin } = req.body;
-    if (name && email && password && isAdmin) {
+    if (name && email && password) {
         try {
             const userCheck = await userModel.findOne({ email });
             if (userCheck) {
